@@ -2,6 +2,10 @@ import streamlit as st
 import seaborn as sns
 import  matplotlib.pyplot as plt
 
+
+secret = st.secrets["MY_SECRET"]
+st.text(f"{secret}")
+
 # Title for the app
 st.title("Streamlit Radio Button Example")
 
