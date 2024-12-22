@@ -1,4 +1,6 @@
 import streamlit as st
+import seaborn as sns
+import  matplotlib.pyplot as plt
 
 # Title for the app
 st.title("Streamlit Radio Button Example")
@@ -32,3 +34,8 @@ elif choice == "Option 3":
 
 # Add any additional content or functionality here
 st.write("Feel free to make another selection above!")
+
+df = sns.load_dataset('penguins')
+fig, ax = plt.subplots()
+sns.scatterplot(data=df, x='flipper_length_mm', y='bill_length_mm', hue='species', ax=ax)
+st.pyplot(fig)
